@@ -1,5 +1,5 @@
 function goToHome(){
-    window.location.replace("index.html");
+    window.location.replace("/");
 }
 function redirectToDownloads() {
     window.location.replace("downloads.html");
