@@ -7,3 +7,6 @@ function redirectToDownloads() {
 function redirectToGithub() {
     window.location.replace("https://github.com/BreadTeleporter2009");
 }
+function redirectToYoutube() {
+    window.location.replace("https://www.youtube.com/channel/UC_WotffgubWjPuokLVguJzw/");
+}
