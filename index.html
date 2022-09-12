@@ -68,6 +68,26 @@ div.content {
   clear: both;
   display: table;
 }
+.alert {
+  padding: 20px;
+  background-color: #367cf4;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
 </style>
 </head>
 <body>
@@ -81,6 +101,10 @@ div.content {
 </div>
 
 <div class="content">
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    Winget is currently not avalible for download.
+  </div>
     <div id="#">
         <h1>Welcome!</h1>
         <p>Welcome to my Website!</p>
