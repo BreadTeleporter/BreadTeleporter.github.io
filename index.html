@@ -113,8 +113,11 @@
   </div>
 </body>
 <script>
-    if (document.cookie){
-        window.location.replace = "oldversion/index.html"
+    if (document.cookie == null){
+        return
+    }
+    else{
+      window.location.replace = "oldversion/index.html"
     }
 function getCookie(cname) {
   let name = cname + "=";
