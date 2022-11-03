@@ -113,12 +113,24 @@
   </div>
 </body>
 <script>
-    if (document.cookie == null){
-      console.log("Dont switch to old version")
+  function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
     }
-    else{
-      window.location.replace = "oldversion/index.html"
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
     }
+  }
+  return "";
+}
+cookies = getCookie("oldversion")
+if (cookies == "true"){
+  window.location.replace("breadteleporter.github.io/oldversion/index.html")
+}
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
