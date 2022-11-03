@@ -129,7 +129,7 @@
 }
 cookies = getCookie("oldversion")
 if (cookies == "true"){
-  window.location.href = "oldversion/index.html"
+  //window.location.href = "oldversion/index.html"
 }
 var start = document.getElementById('1');
 start.focus();
@@ -196,7 +196,7 @@ function checkKey(e) {
         window.location.href = "https://www.youtube.com/channel/UC_WotffgubWjPuokLVguJzw";
     }
     else if (thisrow == 5){
-        document.cookie = "oldversion=true; expires=Fri, 31 Dec 9999 23:59:59 UTC";
+        document.cookie = "oldversion=true; expires=Fri, 31 Dec 9999 23:59:59 UTC; path=/";
         window.location.href = "oldversion/index.html"
     }
   }
