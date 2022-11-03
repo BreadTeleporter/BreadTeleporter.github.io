@@ -63,8 +63,9 @@ body {
     </div>
     <button type="button" onclick="DeleteCookie()">Go back to new version</button>
     <script>
-      function DeleteCookie{
+      function DeleteCookie(){
         document.cookie = "oldversion=; expires=passedDate"
+        window.location.href = "/"
       }
     </script>
 </div>
