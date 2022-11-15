@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        background-image: url("background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .sidebar{
+        background-color: rgba(25, 25, 25, 0.5);
+        height: 93.5vh;
+        width: 250px;
+        padding: 10px;
+        position: fixed;
+        top: 0px;
+        z-index: 1;
+        border: 2.5px;
+        border-color: black;
+        border-radius: 10px;
+        border-style: solid;
+        margin: 10px;
+    }
+    .sidebarbox{
+        border: 2.5px;
+        border-style: solid;
+        border-color: black;
+        background-color: rgba(45, 45, 45, 0.5);
+        width: 95%;
+        margin: auto;
+        border-radius: 10px;
+        
+    }
+    .sidebartitle{
+        background-color: rgb(45, 45, 45);
+        font-weight: bold;
+        color: white;
+        padding: 5px;
+        border: 1px;
+        border-radius: 10px;
+    }
+    .sidebarboxcontent{
+        padding: 5px;
+        color: #4d7dd2;
+    }
+    /*.title{
+        background-color: #eeebd9;
+        height: 75px;
+        width: 100%;
+        position: fixed;
+        top: 0; 
+    }*/
+    .content{
+        margin-left: 300px;
+        /*margin-top: 50px;*/
+        padding: 0px 10px;
+    }
+    a{
+        text-decoration: none;
+        color: #426eb9;
+    }
+    .sidebarbox a:hover{
+        color: #4d7dd2;
+    }
+    .active{
+        font-weight: bolder;
+    }
+    .inactive{
+        color: grey;
+        font-style: italic;
+    }
+    iframe{
+        border: black;
+        border-radius: 10px;
+        border-width: 5px;
+    }
+    .video{
+        float: left;
+        border: 2.5px;
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        width: fit-content;
+        background-color: rgba(25, 25, 25, 0.5);
+        color: #fff;
+    }
+    .videocontent{
+        all: unset;
+    }
+    .welcome{
+        border: 2.5px;
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+        background-color: rgba(25, 25, 25, 0.5);
+        color: white;
+        padding: 10px;
+        font-size: 45px;
+        width: 100%;
+    }
+    .about{
+        border: 2.5px;
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+        background-color: rgba(25, 25, 25, 0.5);
+        color: white;
+        padding: 10px;
+        width: fit-content;   
+    }
+    .about p{
+        font-size: 20px;
+    }
+    .news{
+        float: right;
+        border: 2.5px;
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+        background-color: rgba(25, 25, 25, 0.5);
+        color: white;
+        padding: 10px;
+        width: 47%;
+        height: 416px;
+    }
+</style>
+<body>
+    <div class="content">
+        <div class="welcome">
+            Welcome to BreadTeleporter.github.io!
+        </div>
+        <br>
+        <div class="video">
+            <div class="videocontent">
+                <p>Latest Video</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Eei5A0n9AiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="news">
+            <h1>News</h1>
+            <p>15/11/2022 2:04 GMT</p>
+            <p>More videos coming soon! Maybe....</p>
+        </div>
+        <!--todo: fix this ""code"".-->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="about">
+            <h1>About</h1>
+            <p>Hi! My name is BreadTelepoter. I am a YouTuber, developer and computer nerd!
+            I like messing with computers and viruses. I can program in: C++, HTML, Javascript, CSS and Python.
+            </p>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebarbox">
+            <div class="sidebartitle">
+                Navigation
+            </div>
+            <div class="sidebarboxcontent">
+                <a class="active" href="index.html">Home</a><br>
+                <a class="inactive">Downloads</a><br>
+                <a class="inactive">Blog</a><br>
+            </div>
+        </div>
+        <br>
+        <div class="sidebarbox">
+            <div class="sidebartitle">
+                Links
+            </div>
+            <div class="sidebarboxcontent">
+                <a href="https://www.youtube.com/channel/UC_WotffgubWjPuokLVguJzw">YouTube</a><br>
+                <a href="https://www.github.com/breadteleporter">Github</a><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
