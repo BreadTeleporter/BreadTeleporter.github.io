@@ -77,96 +77,64 @@
         color: grey;
         font-style: italic;
     }
-    iframe{
-        border: black;
-        border-radius: 10px;
-        border-width: 5px;
-    }
-    .video{
-        float: left;
+    .download{
         border: 2.5px;
+        border-radius: 10px;
         border-color: black;
         border-style: solid;
-        border-radius: 10px;
         padding: 10px;
-        font-size: 30px;
-        font-weight: bold;
-        width: fit-content;
-        background-color: rgba(25, 25, 25, 0.5);
-        color: #fff;
-    }
-    .videocontent{
-        all: unset;
-    }
-    .welcome{
-        border: 2.5px;
-        border-color: black;
-        border-style: solid;
-        border-radius: 10px;
-        background-color: rgba(25, 25, 25, 0.5);
         color: white;
-        padding: 10px;
-        font-size: 45px;
-        width: 98%;
+        background-color: rgba(25, 25, 25, 0.5);
     }
-    .about{
+    table{
+        margin: auto;
+        width: 75%;
+        background-color: rgba(25, 25, 25, 0);
         border: 2.5px;
-        border-color: black;
         border-style: solid;
         border-radius: 10px;
-        background-color: rgba(25, 25, 25, 0.5);
-        color: white;
-        padding: 10px;
-        width: fit-content;   
-    }
-    .about p{
-        font-size: 20px;
-    }
-    .news{
-        float: right;
-        border: 2.5px;
         border-color: black;
-        border-style: solid;
-        border-radius: 10px;
-        background-color: rgba(25, 25, 25, 0.5);
-        color: white;
         padding: 10px;
-        width: 250px;
-        height: 416px;
+        text-align: left;
     }
-
+    th{
+        border: 0px;
+        font-size: 25px;
+        border-bottom: 1.5px;
+        border-style: solid;
+        border-color: grey;
+        padding: 5px;
+    }
+    a{
+        text-decoration: none;
+    }
 </style>
 <body>
     <div class="content">
-        <div class="welcome" id="home">
-            Welcome to BreadTeleporter.github.io!
-        </div>
-        <br>
-        <div class="video">
-            <div class="videocontent">
-                <p>Latest Video</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Eei5A0n9AiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="news">
-            <h1>News</h1>
-            <p>15/11/2022 2:04 GMT</p>
-            <p>More videos coming soon! Maybe....</p>
-        </div>
-        <!--todo: fix this ""code"".-->
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="about">
-            <h1>About</h1>
-            <p>Hi! My name is BreadTelepoter. I am a YouTuber, developer and computer nerd!
-            I like messing with computers and viruses. I can program in: C++, HTML, Javascript, CSS and Python.
-            </p>
-        </div>
-        <br>
-        <div class="blog" id="blog">
-            <h1>Blog</h1>
-            <div class="blogcontent">
-                <h1>Test</h1>
-            </div>
+        <div class="download">
+            <h1 style="text-align: center;">Downloads</h1>
+            <table>
+                <tr>
+                    <th>
+                        <a href="downloads/msfampatcher.py">msfampatcher.py</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="downloads/SoldierVirus.exe">SoldierVirus.exe</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="downloads/Winget-Setup.exe">Winget-Setup.exe</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="downloads/WinGet-Portable.exe">Winget-Portable.exe</a>
+                    </th>
+                </tr>
+            </table>
         </div>
     </div>
     <div class="sidebar">
@@ -175,8 +143,8 @@
                 Navigation
             </div>
             <div class="sidebarboxcontent">
-                <a class="active" href="index.html">Home</a><br>
-                <a class="" href="download.html">Downloads</a><br>
+                <a class="" href="index.html">Home</a><br>
+                <a class="active" href="download.html">Downloads</a><br>
                 <a class="" href="blog.html">Blog</a><br>
             </div>
         </div>
