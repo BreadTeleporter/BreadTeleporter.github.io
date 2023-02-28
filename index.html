@@ -1,14 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>BreadTeleporter.github.io</title>
-</head>
-<body>
-    <h1>We have moved to:</h1>
-    <a href="https://breadteleporter.duckdns.org">breadteleporter.duckdns.org!</a>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BreadTeleporter's Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                BreadTeleporter <div id="seperator"></div> <div class="navitem"><a href="downloads/">Downloads</a></div> <div class="navitem"><a href="https://youtube.com/@breadteleporter">Youtube</a></div> <div class="navitem"><a href="https://github.com/breadteleporter">Github</a></div> <div class="navitem"><a id="blogbutton" onclick="toggleblog()">Blog</a></div>
+            </div>
+            <div class="content">
+                <div id="home">
+                    <h1>Welcome to my website!</h1>
+                    Hi! My name is BreadTeleporter. I am a YouTuber, developer and computer nerd!<br>
+                    I like messing with computers and viruses. I can program in: HTML, Javascript,<br>
+                    CSS and Python.
+                </div>
+                <div id="blog">
+                    <h1>Blog</h1>
+                    <h1>The journey to self hosting.</h1>
+                    <p>30th of January, 2023</p>
+                    <h2>Why move to self hosting?</h2>
+                    <p>I wanted to move to self hosting because I was dissatisfied with Github Pages.</p>
+                    <p>One of the many issues was the long build times, slowing down updates to the site.</p>
+                    <h2>What web server do you use?</h2>
+                    <p>I use apache for my web server, it works great and has directory listing pages <br>(which is used for the new downloads page).</p>
+                    <h2>Web server X is better than apache!</h2>
+                    <p>I also use apache because I am familiar with it and it's config files. While other<br>web servers may offer better performance, I did not want to have to learn how to use a new<br>web server</p>
+                    <h2>How can I do this too?</h2>
+                    <p>Every site's mirgration to self hosting is different, but this is how I did it. Note that your migration may be diferent to mine.</p>
+                    <ul style="list-style-type:disc;">
+                        <li>Download the pages from Github.</li>
+                        <li>Copy it over to your server. (I used a Raspberry PI 4)</li>
+                        <li>Install apache. (or your prefered web server)</li>
+                        <li>Go to <a href="https://duckdns.org">DuckDNS.org</a> and follow the install steps.</li>
+                        <li>Copy the pages folder over to /var/www/html/.</li>
+                        <li>Style apache's download page. (optional)</li>
+                        <li>Profit.</li>
+                      </ul>  
+                </div>
+            </div>
+            <div class="videos">
+                Latest video
+                <iframe class="latestVideoEmbed" width="640px" height="360px" vnum='0' cid="UC_WotffgubWjPuokLVguJzw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </body>
+    <script>
+        function toggleblog(){
+            if (document.getElementById("blog").style.display == "block"){
+                document.getElementById("blog").style.display = "none"
+                document.getElementById("home").style.display = "block"
+                document.getElementById("blogbutton").innerText = "Blog"
+            } else {
+                document.getElementById("blog").style.display = "block"
+                document.getElementById("home").style.display = "none"
+                document.getElementById("blogbutton").innerText = "Home"
+            }
+            
+        }
+        const requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        const loadVideo = (iframe) => {
+            const cid = iframe.getAttribute('cid');
+            const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
+            const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+            fetch(reqURL, requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    const videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                    const link = result.items[videoNumber].link;
+                    const id = link.substr(link.indexOf("=") + 1);
+                    iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=0&autoplay=1`);
+                })
+                .catch(error => console.log('error', error));
+        }
+        var iframes = document.getElementsByClassName('latestVideoEmbed');
+        for (var i = 0, len = iframes.length; i < len; i++) {
+            loadVideo(iframes[i]);
+        }
+
+    </script>
 </html>

@@ -1,0 +1,25 @@
+body{
+  background-image: url("/background.jpg");
+  color: white;
+  font-family: monospace;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 80vw;
+  height: 95vh;
+  background-color: rgba(16, 16, 16, 0.5);
+  backdrop-filter: blur(0.5vmin);  
+  padding: 10px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+table{
+  width: 100%;
+}
+address{display: none;}
