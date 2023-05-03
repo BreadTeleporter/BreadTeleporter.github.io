@@ -1,4 +1,4 @@
-window.location = "breadteleporter.duckdns.org";
+window.location = "https://breadteleporter.duckdns.org"
 
 // function page(divname, who){
 //     const pages = document.querySelectorAll('.page');
