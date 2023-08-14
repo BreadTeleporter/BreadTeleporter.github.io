@@ -20,28 +20,8 @@
                     I like messing with computers and viruses. I can program in: HTML, Javascript,<br>
                     CSS and Python.
                 </div>
+                <p>I'm on </p><a rel="me" href="https://mastodon.social/@breadteleporter">Mastodon</a>!</p>
                 <div id="blog">
-                    <h1>Blog</h1>
-                    <h1>The journey to self hosting.</h1>
-                    <p>30th of January, 2023</p>
-                    <h2>Why move to self hosting?</h2>
-                    <p>I wanted to move to self hosting because I was dissatisfied with Github Pages.</p>
-                    <p>One of the many issues was the long build times, slowing down updates to the site.</p>
-                    <h2>What web server do you use?</h2>
-                    <p>I use apache for my web server, it works great and has directory listing pages <br>(which is used for the new downloads page).</p>
-                    <h2>Web server X is better than apache!</h2>
-                    <p>I also use apache because I am familiar with it and it's config files. While other<br>web servers may offer better performance, I did not want to have to learn how to use a new<br>web server</p>
-                    <h2>How can I do this too?</h2>
-                    <p>Every site's mirgration to self hosting is different, but this is how I did it. Note that your migration may be diferent to mine.</p>
-                    <ul style="list-style-type:disc;">
-                        <li>Download the pages from Github.</li>
-                        <li>Copy it over to your server. (I used a Raspberry PI 4)</li>
-                        <li>Install apache. (or your prefered web server)</li>
-                        <li>Go to <a href="https://duckdns.org">DuckDNS.org</a> and follow the install steps.</li>
-                        <li>Copy the pages folder over to /var/www/html/.</li>
-                        <li>Style apache's download page. (optional)</li>
-                        <li>Profit.</li>
-                      </ul>  
                 </div>
             </div>
             <div class="videos">
@@ -51,8 +31,7 @@
         </div>
     </body>
     <script>
-        
-        window.location = "https://breadteleporter.duckdns.org"
+
         function toggleblog(){
             if (document.getElementById("blog").style.display == "block"){
                 document.getElementById("blog").style.display = "none"
